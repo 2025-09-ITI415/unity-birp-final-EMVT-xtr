@@ -18,6 +18,9 @@ public class First_Person_Movement : MonoBehaviour
     [SerializeField] private float JumpForce;
     [SerializeField] private float Sensetivity;
     [SerializeField] private float Gravity = 9.81f;
+    private bool isWalking = false;
+    public AudioSource audioSource;
+    public AudioClip[] footstepGrass;
     [Space]
     [Header("Sneaking")]
     [SerializeField] private bool Sneak = false;
@@ -52,10 +55,24 @@ public class First_Person_Movement : MonoBehaviour
     private void MovePlayer()
     {
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
-
+        isWalking = PlayerMovementInput.magnitude > 0.1f;
 
         if (Controller.isGrounded)
         {
+            if (isWalking)
+            {
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.clip = footstepGrass[Random.Range(0, footstepGrass.Length)];
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                audioSource.Stop();
+            }
+
+
             Velocity.y = -1f;
 
             if (Input.GetKeyDown(KeyCode.Space) && Sneaking == false)
