@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour
     public AudioClip collectSound;
     public float volume = 1f;
     public GameObject beaconBread;
+    public GameObject Player;
 
     private void Start()
     {
@@ -58,7 +59,7 @@ public class Coin : MonoBehaviour
         // Write back
         coinText.text = "Coins Acquired: " + currentCoins;
 
-        if(currentCoins == 29){
+        if(currentCoins == 2){
             Vector3 spawnPos = new Vector3(361.0029f, 202.48f, 795.244f);
             Instantiate(beaconBread, spawnPos, Quaternion.identity);
             Debug.Log("BeaconBread spawned!");

@@ -5067,3 +5067,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9eec00cce5895c41a40fe8c3d8b5ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winSound: {fileID: 8300000, guid: e61544875cebdd147ad101b2b9580b73, type: 3}
+  volume: 1

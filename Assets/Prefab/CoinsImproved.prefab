@@ -5079,6 +5079,7 @@ MonoBehaviour:
   collectSound: {fileID: 8300000, guid: 50278198a2c9d294f9cc78d3f56822f3, type: 3}
   volume: 1
   beaconBread: {fileID: 7742834856649161974, guid: 4d3bb972e1961fe4ea662ec3ec361d2f, type: 3}
+  Player: {fileID: 777787460810559335, guid: e892f488c8b41d4459647b481f69a0c5, type: 3}
 --- !u!95 &2283877139143812047
 Animator:
   serializedVersion: 7
