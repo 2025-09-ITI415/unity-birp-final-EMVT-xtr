@@ -103,4 +103,13 @@ public class First_Person_Movement : MonoBehaviour
         transform.Rotate(0f, PlayerMouseInput.x * Sensetivity, 0f);
         PlayerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Triggered by: " + other.name);
+        if (other.CompareTag("Coin"))
+        {
+            Speed = Speed + 2;
+            JumpForce = JumpForce +1;
+        }
+    }
 }
