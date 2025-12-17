@@ -5075,8 +5075,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e1431b7d7a1c047870806cd97195df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinCount: 0
   collectSound: {fileID: 8300000, guid: 50278198a2c9d294f9cc78d3f56822f3, type: 3}
   volume: 1
+  beaconBread: {fileID: 7742834856649161974, guid: 4d3bb972e1961fe4ea662ec3ec361d2f, type: 3}
 --- !u!95 &2283877139143812047
 Animator:
   serializedVersion: 7
