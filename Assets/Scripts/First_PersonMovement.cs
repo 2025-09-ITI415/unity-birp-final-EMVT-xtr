@@ -21,6 +21,7 @@ public class First_Person_Movement : MonoBehaviour
     private bool isWalking = false;
     public AudioSource audioSource;
     public AudioClip[] footstepGrass;
+    public AudioSource audioSource2;
     [Space]
     [Header("Sneaking")]
     [SerializeField] private bool Sneak = false;
@@ -108,8 +109,12 @@ public class First_Person_Movement : MonoBehaviour
         Debug.Log("Triggered by: " + other.name);
         if (other.CompareTag("Coin"))
         {
-            Speed = Speed + 2;
+            Speed = Speed + 3;
             JumpForce = JumpForce +1;
+        }
+        if (other.CompareTag("Beacon")){
+            audioSource2.Stop();
+            audioSource.Stop();
         }
     }
 }

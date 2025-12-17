@@ -59,7 +59,7 @@ public class Coin : MonoBehaviour
         // Write back
         coinText.text = "Coins Acquired: " + currentCoins;
 
-        if(currentCoins == 2){
+        if(currentCoins == 29){
             Vector3 spawnPos = new Vector3(361.0029f, 202.48f, 795.244f);
             Instantiate(beaconBread, spawnPos, Quaternion.identity);
             Debug.Log("BeaconBread spawned!");
